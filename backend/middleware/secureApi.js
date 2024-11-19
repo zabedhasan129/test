@@ -1,6 +1,6 @@
 let secureApi = (req,res,next) =>{
-    // console.log(req.headers.authorization)
-    if(req.headers.authorization == 12345){
+    // console.log(process.env.SECUREAPI)
+    if(req.headers.authorization == process.env.SECUREAPI){
         next();
     }
     else{
